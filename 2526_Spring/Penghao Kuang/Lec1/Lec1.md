@@ -5,7 +5,7 @@ paginate: true
 math: true
 ---
 
-# CS190C Lec 1
+# CS190C Lec1
 
 Word Embedding & Language Modeling
 
@@ -19,7 +19,7 @@ Word Embedding & Language Modeling
   * N-grams
   * RNN
   * LSTM
-* Thinkings
+* Thinking
 
 ---
 
@@ -570,21 +570,3 @@ class TextRNNPredictor:
 ## Thinkings
 
 * *In N-grams, the model will crashed because of missing information of global context. Can we make N very large to solve this problem?*
-
----
-
-<div style="display: flex;">
-
-<div style="flex: 1; padding-right: 5px;">
-
-
-
-</div>
-
-<div style="flex: 1; padding-left: 5px;">
-
-
-
-</div>
-
-</div>

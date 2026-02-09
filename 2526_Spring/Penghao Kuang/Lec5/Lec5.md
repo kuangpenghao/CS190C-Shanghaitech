@@ -3,10 +3,21 @@ marp: true
 theme: default
 paginate: true
 math: true
+style: |
+    section {
+        background: linear-gradient(
+            to bottom,
+            #c0a9ff 0%,
+            #ffffff 15%,
+            #fdfdfd 95%,
+            #d8acff 100%
+        ) !important;
+        color: #0c0000;
+    }
 ---
 
 # CS190C Lec5
-Build Transformer Decoder
+Build Transformer
 
 ---
 
@@ -127,8 +138,8 @@ Moreover, almost all modules require calling the **linear transformation** modul
 ---
 
 <style scoped>
-section {
-  font-size: 1.9em;
+section * {
+  font-size: 0.96em !important;
 }
 </style>
 
@@ -194,8 +205,8 @@ Question: Linear operations are the most frequent in LLMs……
 ---
 
 <style scoped>
-section {
-  font-size: 2em;
+section * {
+  font-size: 0.97em !important;
 }
 </style>
 
@@ -263,8 +274,8 @@ class Linear_Transform(nn.Module):
 ---
 
 <style scoped>
-section {
-  font-size: 2em;
+section * {
+  font-size: 0.94em !important;
 }
 </style>
 
@@ -284,8 +295,8 @@ Input tensor shape: `[batch_size, seq_len, d_model]` $\Rightarrow$ Not a 1D vect
 ---
 
 <style scoped>
-section {
-  font-size: 2.1em;
+section * {
+  font-size: 0.97em !important;
 }
 </style>
 
@@ -445,8 +456,8 @@ where  $\theta_{i,k} = \frac{i}{\Theta^{2k/d}}$
 ---
 
 <style scoped>
-section {
-  font-size: 1.9em;
+section * {
+  font-size: 0.95em !important;
 }
 </style>
 
@@ -490,8 +501,8 @@ The transformation caused by position, is only related to relative position.
 ---
 
 <style scoped>
-section {
-  font-size: 2.1em;
+section * {
+  font-size: 0.97em !important;
 }
 </style>
 
@@ -532,8 +543,17 @@ section {
 ---
 
 <style scoped>
-section {
-  font-size: 1.8em;
+/* 调整普通文本 */
+div > div, li, p, h2 {
+  font-size: 0.83em;
+}
+
+/* ⭐ 关键：同时调整代码块 */
+pre,
+code,
+pre code {
+  font-size: 0.83em !important; /* 必须加 !important */
+  line-height: 0.98; /* 可选：改善行高 */
 }
 </style>
 
@@ -692,8 +712,17 @@ class Scaled_dot_Product_Attention(nn.Module):
 ---
 
 <style scoped>
-section {
-  font-size: 1.9em;
+/* 调整普通文本 */
+div > div, li, p, h2 {
+  font-size: 0.83em;
+}
+
+/* ⭐ 关键：同时调整代码块 */
+pre,
+code,
+pre code {
+  font-size: 0.83em !important; /* 必须加 !important */
+  line-height: 0.98; /* 可选：改善行高 */
 }
 </style>
 
@@ -730,8 +759,17 @@ class Causal_Mask:
 ---
 
 <style scoped>
-section {
-  font-size: 1.9em;
+/* 调整普通文本 */
+div > div, li, p, h2 {
+  font-size: 0.83em;
+}
+
+/* ⭐ 关键：同时调整代码块 */
+pre,
+code,
+pre code {
+  font-size: 0.83em !important; /* 必须加 !important */
+  line-height: 0.99; /* 可选：改善行高 */
 }
 </style>
 

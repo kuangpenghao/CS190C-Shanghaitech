@@ -3,6 +3,17 @@ marp: true
 theme: default
 paginate: true
 math: true
+style: |
+    section {
+        background: linear-gradient(
+            to bottom,
+            #c0a9ff 0%,
+            #ffffff 15%,
+            #fdfdfd 95%,
+            #d8acff 100%
+        ) !important;
+        color: #0c0000;
+    }
 ---
 
 # CS190C Lec6
@@ -199,8 +210,8 @@ def load_by_range(self,start_idx,end_idx):
 ---
 
 <style scoped>
-section {
-  font-size: 1.9em;
+section * {
+  font-size: 0.97em !important;
 }
 </style>
 
@@ -1012,6 +1023,12 @@ corpus_size=args.corpus_size
 - It is recommended to output real-time status during the process, such as the current loss function value, current text prediction situation, etc.
 
 ---
+
+<style scoped>
+section * {
+  font-size: 1.1em !important;
+}
+</style>
 
 <p align="center">
     <strong>Code Explanation</strong>

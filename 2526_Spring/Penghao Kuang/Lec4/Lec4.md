@@ -1,13 +1,23 @@
 ---
 marp: true
-theme: default
 paginate: true
 math: true
+style: |
+    section {
+        background: linear-gradient(
+            to bottom,
+            #c0a9ff 0%,
+            #ffffff 15%,
+            #fdfdfd 95%,
+            #d8acff 100%
+        ) !important;
+        color: #0c0000;
+    }
 ---
 
 # CS190C Lec4 
 
-Byte-Pair Encoding (BPE) & Optimized Algorithm
+Byte-Pair Encoding (BPE)
 
 ---
 
@@ -507,8 +517,8 @@ Héllò hôw <|endoftext|><|endoftext|> are ü?
 ---
 
 <style scoped>
-section {
-  font-size: 2em;
+div > div {
+  font-size: 0.83em;
 }
 </style>
 
@@ -793,8 +803,8 @@ An example……
 ---
 
 <style scoped>
-section {
-  font-size: 2.1em;
+section * {
+  font-size: 0.97em !important;
 }
 </style>
 
@@ -811,6 +821,12 @@ section {
 * The heap: insert all related pairs and counted numbers(lazy update)
 
 ---
+
+<style scoped>
+section * {
+  font-size: 1.2em !important;
+}
+</style>
 
 <p align="center">
 Code explanation: Optimization for Merge Algorithm
@@ -890,12 +906,16 @@ Code explanation: Optimization for Encode Algorithm
 ---
 
 <style scoped>
-section {
-  font-size: 1.9em;
+section * {
+  font-size: 0.95em !important;
 }
 </style>
 
-
+<style scoped>
+div > div {
+  font-size: 0.9em;
+}
+</style>
 
 <div style="display: flex;">
 

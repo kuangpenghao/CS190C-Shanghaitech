@@ -3,6 +3,17 @@ marp: true
 theme: default
 paginate: true
 math: true
+style: |
+    section {
+        background: linear-gradient(
+            to bottom,
+            #ff9f9f 0%,
+            #ffffff 15%,
+            #fdfdfd 95%,
+            #ffacac 100%
+        ) !important;
+        color: #0c0000;
+    }
 ---
 
 # CS190C Lec9
@@ -166,8 +177,8 @@ So how do we deriviate what activation to save?
 ---
 
 <style scoped>
-section {
-  font-size: 1.8em;
+section * {
+  font-size: 0.97em !important;
 }
 </style>
 
@@ -203,8 +214,8 @@ For `RMSNorm` before `MHA`:
 ---
 
 <style scoped>
-section {
-  font-size: 1.8em;
+section * {
+  font-size: 0.97em !important;
 }
 </style>
 
@@ -240,8 +251,8 @@ For calculation of `Q` `K` `V` in `MHA`:
 ---
 
 <style scoped>
-section {
-  font-size: 1.8em;
+section * {
+  font-size: 0.97em !important;
 }
 </style>
 
@@ -276,8 +287,8 @@ For calculation of Attention Score `S` in `MHA`:
 ---
 
 <style scoped>
-section {
-  font-size: 1.8em;
+section * {
+  font-size: 0.97em !important;
 }
 </style>
 
@@ -312,8 +323,8 @@ For calculation of Attention Weight `P` in `MHA`:
 ---
 
 <style scoped>
-section {
-  font-size: 1.8em;
+section * {
+  font-size: 0.97em !important;
 }
 </style>
 
@@ -348,8 +359,8 @@ For calculation of multi-head output `O` in `MHA`:
 ---
 
 <style scoped>
-section {
-  font-size: 1.8em;
+section * {
+  font-size: 0.97em !important;
 }
 </style>
 
@@ -385,8 +396,8 @@ For calculation of attention output `y` in `MHA`:
 ---
 
 <style scoped>
-section {
-  font-size: 1.8em;
+section * {
+  font-size: 0.97em !important;
 }
 </style>
 
@@ -420,8 +431,8 @@ For residual connection and `RMSNorm` before `FFN`:
 ---
 
 <style scoped>
-section {
-  font-size: 1.8em;
+section * {
+  font-size: 0.97em !important;
 }
 </style>
 
@@ -457,8 +468,8 @@ For W1 Gate in `FFN`:
 ---
 
 <style scoped>
-section {
-  font-size: 1.8em;
+section * {
+  font-size: 0.97em !important;
 }
 </style>
 
@@ -493,8 +504,8 @@ For W3 Gate in `FFN`:
 ---
 
 <style scoped>
-section {
-  font-size: 1.8em;
+section * {
+  font-size: 0.97em !important;
 }
 </style>
 
@@ -530,8 +541,8 @@ For gate interaction in `FFN`:
 ---
 
 <style scoped>
-section {
-  font-size: 1.8em;
+section * {
+  font-size: 0.97em !important;
 }
 </style>
 
@@ -566,12 +577,6 @@ For W2 Gate in `FFN`:
 
 ---
 
-<style scoped>
-section {
-  font-size: 1.8em;
-}
-</style>
-
 ## 2. Activations of model during foward process
 
 <div style="display: flex;">
@@ -597,11 +602,6 @@ For final residual:
 
 ---
 
-<style scoped>
-section {
-  font-size: 1.8em;
-}
-</style>
 
 ## 2. Activations of model during foward process
 
@@ -629,8 +629,8 @@ For Final `RMSNorm`:
 ---
 
 <style scoped>
-section {
-  font-size: 1.8em;
+section * {
+  font-size: 0.97em !important;
 }
 </style>
 
@@ -667,8 +667,8 @@ For `Output Embedding`:
 ---
 
 <style scoped>
-section {
-  font-size: 1.8em;
+section * {
+  font-size: 0.97em !important;
 }
 </style>
 
@@ -913,8 +913,8 @@ $$T_{seconds}=\frac{\text{Total FLOPs}}{\text{MFU}*\text{Peak}}$$
 ---
 
 <style scoped>
-section {
-  font-size: 1.9em;
+section * {
+  font-size: 0.97em !important;
 }
 </style>
 
@@ -932,8 +932,8 @@ $$T_{seconds}=3.617*10^{-6}\cdot\dfrac{3L(32bcd^2+4bc^2d)+6bcdv+30dv+15d+15L(2d+
 ---
 
 <style scoped>
-section {
-  font-size: 2em;
+section * {
+  font-size: 0.97em !important;
 }
 </style>
 

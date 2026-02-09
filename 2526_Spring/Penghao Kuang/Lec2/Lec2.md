@@ -3,6 +3,17 @@ marp: true
 theme: default
 paginate: true
 math: true
+style: |
+    section {
+        background: linear-gradient(
+            to bottom,
+            #a9deff 0%,
+            #ffffff 15%,
+            #fdfdfd 95%,
+            #acd3ff 100%
+        ) !important;
+        color: #0c0000;
+    }
 ---
 
 # CS190C Lec2
@@ -135,11 +146,11 @@ If a word has embedding $x \in R^d$, each $x_i$ ($1\leq i \leq d$) may stands fo
 
 ## How to encode with proper weight?
 
-* For all $d$ semantic features, we hope to train a matrix $W^Q \in R^{d_{qk}*d}$, which means: Certain semantic feature will cause a "problem", whose embedding $\in R^{d_{qk}}$
+* For all $d$ semantic features, we hope to train a matrix $W^Q \in R^{d*d_{qk}}$, which means: Certain semantic feature will cause a "problem", whose embedding $\in R^{d_{qk}}$
 
-* Similarly, we hope to train a matrix $W^K \in R^{d_{qk}*d}$, which means: Certain semantic feature will represent a property, whose embedding $\in R^{d_{qk}}$.
+* Similarly, we hope to train a matrix $W^K \in R^{d*d_{qk}}$, which means: Certain semantic feature will represent a property, whose embedding $\in R^{d_{qk}}$.
 
-* Similarly, we also hope to train a matrix $W^V \in R^{d_{v}*d}$, which means: Certain semantic feature will feedback certain kind of information, whose embedding $\in R^{d_{v}}$.
+* Similarly, we also hope to train a matrix $W^V \in R^{d*d_{v}}$, which means: Certain semantic feature will feedback certain kind of information, whose embedding $\in R^{d_{v}}$.
 
 ---
 
@@ -149,11 +160,11 @@ So, how do we calculate the "problem" of a word, which is the combination of sem
 
 Recall: Certain value of $x_i$ means the significance level of i-th semantic features.
 
-$W^Q=[w^q_1 w^q_2 …… w^q_d]$.
+$W^Q=[w^q_1 w^q_2 …… w^q_d]^T$.
 $q=x_1w^q_1+x_2w^q_2+……+x_dw^q_d$
-$\Rightarrow q=W^Q x$, which is the "problem" of a word.
+$\Rightarrow q=xW^Q$, which is the "problem" of a word.
 
-Similarly:$k=W^K x, v=W^V x$
+Similarly:$k=xW^K, v=xW^V$
 
 $x\Rightarrow q,k,v$
 
@@ -161,7 +172,7 @@ $x\Rightarrow q,k,v$
 
 ## Scaling Dot Product Attention (SDPA)
 
-So, if word $i$ with "problem" $q_i$, word $j$'s weight score with word $i$ is $q^T_ik_j$. Use softmax to normalize all words weight with word $i$ to get weight distribution, which is the weight of sum $v_j$ feedback to word $i$.
+So, if word $i$ with "problem" $q_i$, word $j$'s weight score with word $i$ is $q_ik_j^T$. Use softmax to normalize all words weight with word $i$ to get weight distribution, which is the weight of sum $v_j$ feedback to word $i$.
 
 Write to matrix formular:
 $\text{Attention}_i=\text{Softmax}(\frac{QK^T}{\sqrt{d_{qk}}})V$.
@@ -581,21 +592,3 @@ $\Rightarrow$`inputs`+`outputs`
 * During training process: The model decoder try to output `seq_len` embeddings, that is the "sentence" decoded.
 * The $i$-th position means: Absorbing information of input sentence(encoder output) and $1$-th$\sim i$-th decoder output, predict the embedding of $i+1$-th word.
 * So we cannot make model know any information about words after position $i$, otherwise it is information leak.
-
----
-
-<div style="display: flex;">
-
-<div style="flex: 1; padding-right: 5px;">
-
-
-
-</div>
-
-<div style="flex: 1; padding-left: 5px;">
-
-
-
-</div>
-
-</div>

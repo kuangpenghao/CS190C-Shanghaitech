@@ -30,7 +30,6 @@ From Seq2Seq to Transformer
   * Feed-Forward Network
   * Residual Connection
   * The Whole Transformer
-* Thinking
 
 ---
 

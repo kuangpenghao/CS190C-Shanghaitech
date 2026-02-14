@@ -30,7 +30,6 @@ Word Embedding & Language Modeling
   * N-grams
   * RNN
   * LSTM
-* Thinking
 
 ---
 

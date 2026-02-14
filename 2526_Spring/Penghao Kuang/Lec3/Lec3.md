@@ -748,6 +748,14 @@ This is mixture of experts:
 
 We use `batch_size` samplings to run a training step. This means we need to do `batch_size` forward process in parallel. For each tensor in the embedding process, we do normalization for each element based on **`batch_size` elements at the same position**.
 
+<p align="center">
+    <img src="21.png" width=350>
+</p>
+
+---
+
+## Batch Norm
+
 $$y_i=\frac{x_i+\mu_i}{\sqrt{\sigma_i^2+\epsilon}}\gamma_i+\beta_i$$
 
 $\mu_i,\sigma_i$ are calculated from `batch_size` number of elements at the same position.
@@ -762,7 +770,7 @@ It is used more frequently in CV, but not in LLM.
 
 * If batch size is small, for example, equals to 1 during inference, it is very unstable.
 * Cause distortion of $\mu,\sigma$ for sentences with varying length (if we use padding mask).
-  * We will let the embedding of padding mask be $0$, and it has no actually mean.
+  * We will initially let the embedding of padding mask be $0$ or a certain vector, and it has no actually mean, which should not be included in calculation.
 
 ---
 
@@ -773,6 +781,10 @@ Compared with Batch Norm: we use `d_model` number of elements at the same tensor
 $$y_i=\frac{x_i+\mu_i}{\sqrt{\sigma_i^2+\epsilon}}\gamma_i+\beta_i$$
 
 Used in the original Transformer and some other LLMs, such as BERT, GPT-2.
+
+<p align="center">
+    <img src="21.png" width=350>
+</p>
 
 ---
 

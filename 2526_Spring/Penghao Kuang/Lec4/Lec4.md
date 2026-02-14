@@ -902,39 +902,3 @@ encode number: 596
 <p align="center">
 Code explanation: Optimization for Encode Algorithm
 </p>
-
----
-
-<style scoped>
-section * {
-  font-size: 0.95em !important;
-}
-</style>
-
-<style scoped>
-div > div {
-  font-size: 0.9em;
-}
-</style>
-
-<div style="display: flex;">
-
-<div style="flex: 1; padding-right: 5px;">
-
-
-
-</div>
-
-<div style="flex: 1; padding-left: 5px;">
-
-
-
-</div>
-
-</div>
-
-
-<p align="center">
-    <img src="4.png" width=400>
-</p>
-
